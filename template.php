@@ -61,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fas fa-bars" aria-hidden="true"></span></label>
                                 <input type="checkbox" id="drop" />
                                 <ul class="menu">
-                                    <li class="active"><a href="#">Monitoring </a></li>
+                                    <li ><a href="#">Monitoring </a></li>
                                     <li><a href="#">Log Aktivitas </a></li>
 
                                 </ul>

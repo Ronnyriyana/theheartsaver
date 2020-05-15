@@ -1744,7 +1744,7 @@ a.move-top span {
 
 /*-- accordion profil --*/
 .accordion {
-  background-color: #eee;
+  background-color: #eef;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -1757,7 +1757,7 @@ a.move-top span {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #eef;
 }
 
 .accordion:after {
@@ -1774,8 +1774,9 @@ a.move-top span {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #eef;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  text-align:left;
 }
