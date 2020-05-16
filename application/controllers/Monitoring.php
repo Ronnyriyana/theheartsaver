@@ -11,7 +11,7 @@ class Monitoring extends CI_Controller {
 	public function index()
 	{
         $data = array(
-
+            "title_page" => "Monitoring"
         );
 		$this->template->isi('monitoring/monitoring',$data);  
 	}
