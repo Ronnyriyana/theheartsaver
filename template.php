@@ -92,10 +92,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         </div>
         <!-- //header -->
-        <section class="banner-bottom py-5">
+        <section class="banner-bottom py-4">
             <div class="container py-md-5">
                 <div class="row mt-lg-5 text-center" id="stats">
-
                     <div class="col-lg-4 counter editContent mt-3">
 							<button class="accordion">Nama : Fajar Adi</button>
 							<div class="panel">
@@ -135,25 +134,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
 
         </div>
-
-
-    </div>
-	<script>
+</body>
+<script>
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+	this.classList.toggle("active");
+	var panel = this.nextElementSibling;
+	if (panel.style.maxHeight) {
+	  panel.style.maxHeight = null;
+	} else {
+	  panel.style.maxHeight = panel.scrollHeight + "px";
+	} 
   });
 }
 </script>
-</body>
 
 </html>
