@@ -990,7 +990,7 @@ h4.leave-w3layouts {
     cursor: pointer;
     border-radius: 4px;
     -webkit-border-radius: 4px;
-    -o- border-radius: 4px;
+    -o-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     font-weight: 400;
@@ -1002,7 +1002,7 @@ h4.leave-w3layouts {
 .single-w3pvt-page img {
     border-radius: 4px;
     -webkit-border-radius: 4px;
-    -o- border-radius: 4px;
+    -o-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
 }
@@ -1756,8 +1756,12 @@ a.move-top span {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.accordion:hover {
   background-color: #eef;
+}
+
+.accordion:active {
+  background-color: rgb(192, 192, 219);
 }
 
 .accordion:after {
@@ -1768,9 +1772,9 @@ a.move-top span {
   margin-left: 5px;
 }
 
-/*.active:after {
+.tampil:after {
   content: "\2212";
-}*/
+}
 
 .panel {
   padding: 0 18px;
