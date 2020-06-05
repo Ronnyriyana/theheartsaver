@@ -15,8 +15,8 @@
 						<label for="drop" class="toggle mt-lg-0 mt-1"><span class="fas fa-bars" aria-hidden="true"></span></label>
 						<input type="checkbox" id="drop" />
 						<ul class="menu">
-							<li ><a href="#">Monitoring </a></li>
-							<li><a href="#">Log Aktivitas </a></li>
+							<li ><a href="<?php echo base_url('index.php/monitoring'); ?>">Monitoring </a></li>
+							<li><a href="<?php echo base_url('index.php/log_aktivitas'); ?>">Log Aktivitas </a></li>
 
 						</ul>
 					</nav>
