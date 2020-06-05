@@ -14,8 +14,8 @@ $(document).ready(function() {
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Denyut Nadi</th>
-                        <th>Posisi</th>
+                        <th>Denyut Nadi (BPM)</th>
+                        <th>Posisi Pasien</th>
                         <th>Waktu</th>
                     </tr>
                 </thead>
