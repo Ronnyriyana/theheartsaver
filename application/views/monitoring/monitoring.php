@@ -15,6 +15,17 @@
 				<img src="<?php echo base_url(); ?>assets/images/Denyutnadi.png" width="30%" id="gmbrJantung">
 				<div class="counter-info">
 					<h4><?= $data['denyut_nadi']; ?> BPM</h4>
+					<?php
+						if($data['denyut_nadi']<50){
+							$keadaan="( <font color='red'><b>Danger</b></font> )";
+						}elseif(($data['denyut_nadi']<=100)){
+							$keadaan="( <b>Normal</b> )";
+						}else{
+							$keadaan="( <font color='red'><b>Need Attention</b></font> )";
+						}
+
+						echo $keadaan;
+					?>
 				</div>
 			</div>
 			<div class="col-lg-4 counter editContent mt-3">
