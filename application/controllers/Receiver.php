@@ -24,9 +24,9 @@ class Receiver extends CI_Controller {
 			$res = $this->receiver_m->insertLog($data);
 			if($res>=1){
 				if($data['denyut_nadi']<50){
-					kirim_email("Danger","Pasien bernama tatang dalam kondisi berbahaya");
+					$this->kirim_email("Danger","Pasien bernama tatang dalam kondisi berbahaya");
 				}elseif(($data['denyut_nadi']>100)){
-					kirim_email("Need Attention","Pasien bernama tatang perlu perawatan");
+					$this->kirim_email("Need Attention","Pasien bernama tatang perlu perawatan");
 				}
 			}
 			else{
