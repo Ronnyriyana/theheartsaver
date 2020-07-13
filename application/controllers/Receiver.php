@@ -24,9 +24,9 @@ class Receiver extends CI_Controller {
 			$res = $this->receiver_m->insertLog($data);
 			if($res>=1){
 				if($data['denyut_nadi']<50){
-					send_mail("Danger","Pasien bernama tatang dalam kondisi berbahaya");
+					kirim_email("Danger","Pasien bernama tatang dalam kondisi berbahaya");
 				}elseif(($data['denyut_nadi']>100)){
-					send_mail("Need Attention","Pasien bernama tatang perlu perawatan");
+					kirim_email("Need Attention","Pasien bernama tatang perlu perawatan");
 				}
 			}
 			else{
@@ -37,7 +37,7 @@ class Receiver extends CI_Controller {
 		}
 	  }
 	  
-	  public function send_mail($subject,$pesan) { 
+	  public function kirim_email($subject,$pesan) { 
 
 		$from_email = "support@theheartsaver.in"; 
 		$to_email = "riyanaronny@gmail.com";
