@@ -23,7 +23,6 @@ class Receiver extends CI_Controller {
 		if($cek = $this->receiver_m->check_waktu($data['id_pasien'],$data['waktu']) <1){
 			$res = $this->receiver_m->insertLog($data);
 			if($res>=1){
-				echo "Berhasil";
 				if($data['denyut_nadi']<50){
 					send_mail("Danger","Pasien bernama tatang dalam kondisi berbahaya");
 				}elseif(($data['denyut_nadi']>100)){
