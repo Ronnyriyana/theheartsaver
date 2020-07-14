@@ -66,7 +66,9 @@ class Receiver extends CI_Controller {
 				Detak jantung pasien = 65 Bpm
 				";
 			}elseif($subject == "Need Attention"){
-				$pesan = "Kondisi pasien bernama Joni perlu diperhatikan !";
+				$pesan = "[ ".$waktu." ]"." Kondisi pasien bernama Joni perlu diperhatikan !! </br>
+				Detak jantung pasien = 66 Bpm
+				";
 			}
 		$this->email->message($pesan);
 
