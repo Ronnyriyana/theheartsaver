@@ -61,17 +61,20 @@ class Receiver extends CI_Controller {
 		$this->email->from($from_email, 'The Heart Saver'); 
 		$this->email->to($to_email);
 		$this->email->subject($subject);
-		if($subject == "Danger"){
-			$this->email->message("Pasien bernama Joni membutuhkan perawatan !!");
-		}elseif($subject == "Need Attention"){
-			$this->email->message("Kondisi pasien bernama Joni perlu diperhatikan !");
-		}
+			if($subject == "Danger"){
+				$pesan = "[ ".$waktu." ]"." Pasien bernama Joni membutuhkan perawatan !! </br>
+				Detak jantung pasien = 65 Bpm
+				";
+			}elseif($subject == "Need Attention"){
+				$pesan = "Kondisi pasien bernama Joni perlu diperhatikan !";
+			}
+		$this->email->message($pesan);
 
 		//Send mail 
 		if($this->email->send()){
-			   Echo "</br> Email terkirim";
+			   Echo "</br> Email terkirim ".$to_email;
 		}else {
-			   Echo "</br> Email tidak terkirim";
+			   Echo "</br> Email tidak terkirim ".$to_email;
 		} 
 	 }
       
