@@ -6,7 +6,7 @@ class Receiver extends CI_Controller {
 		parent::__construct();
 		
 		//$this->load->helper('url');
-		$this->load->model('receiver_m');
+		$this->load->model('receiver_m','m');
 	}  
 	
 	public function index(){
@@ -20,13 +20,13 @@ class Receiver extends CI_Controller {
 			$data = $this->input->get(null, true);
 		}
 		
-		if($cek = $this->receiver_m->check_waktu($data['id_pasien'],$data['waktu']) <1){
-			$res = $this->receiver_m->insertLog($data);
+		if($cek = $this->m->check_waktu($data['id_pasien'],$data['waktu']) <1){
+			$res = $this->m->insertLog($data);
 			if($res>=1){
 				if($data['denyut_nadi']<50){
-					$this->kirim_email("Danger","Pasien bernama tatang dalam kondisi berbahaya");
+					$this->kirim_email("Danger",$data['id_pasien'],$data['waktu']);
 				}elseif(($data['denyut_nadi']>100)){
-					$this->kirim_email("Need Attention","Pasien bernama tatang perlu perawatan");
+					$this->kirim_email("Need Attention",$data['id_pasien'],$data['waktu']);
 				}
 			}
 			else{
@@ -37,10 +37,13 @@ class Receiver extends CI_Controller {
 		}
 	  }
 	  
-	  public function kirim_email($subject,$pesan) { 
+	  public function kirim_email($subject,$id_pasien,$waktu) { 
+		$pasien = $this->m->check_pasien($id_pasien);
+		foreach($pasien as $data){
+			$to_email = $data['email'];
+		}
 
-		$from_email = "support@theheartsaver.in"; 
-		$to_email = "riyanaronny@gmail.com";
+		$from_email = "support@theheartsaver.in";
 
 		$config = Array(
 			   'protocol' => 'smtp',
@@ -57,8 +60,12 @@ class Receiver extends CI_Controller {
 
 		$this->email->from($from_email, 'The Heart Saver'); 
 		$this->email->to($to_email);
-		$this->email->subject($subject); 
-		$this->email->message($pesan); 
+		$this->email->subject($subject);
+		if($subject == "Danger"){
+			$this->email->message("Pasien bernama Joni membutuhkan perawatan !!");
+		}elseif($subject == "Need Attention"){
+			$this->email->message("Kondisi pasien bernama Joni perlu diperhatikan !");
+		}
 
 		//Send mail 
 		if($this->email->send()){

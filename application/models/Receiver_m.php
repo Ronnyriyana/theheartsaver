@@ -14,4 +14,11 @@ class Receiver_m extends CI_Model {
         return $query->num_rows();
     }
 
+    function check_pasien($id_pasien) {
+        $this->db->select('email');
+        $this->db->where('id_pasien', $id_pasien);
+        $query =  $this->db->get('pasien');
+        return $query->result_array();
+    }
+
 }
