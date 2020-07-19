@@ -54,7 +54,7 @@ class Receiver extends CI_Controller {
 			   'smtp_port' => 465,
 			   'smtp_user' => $from_email,
 			   'smtp_pass' => 'SOL.~0A}?ldU',
-			   'mailtype'  => 'html', 
+			   'mailtype'  => 'text/html', 
 			   'charset'   => 'iso-8859-1'
 	   );
 
@@ -67,14 +67,14 @@ class Receiver extends CI_Controller {
 			if($subject == "Danger"){
 				$pesan = "
 				Nama : ".$nama."
-				BPM : ".$denyut_nadi."
+				BPM : ".$denyut_nadi." ( Danger )
 				Posisi : ".$posisi."
 				Waktu : ".$waktu."
 				";
 			}elseif($subject == "Need Attention"){
 				$pesan = "
 				Nama : ".$nama."
-				BPM : ".$denyut_nadi."
+				BPM : ".$denyut_nadi." ( Need Attetion )
 				Posisi : ".$posisi."
 				Waktu : ".$waktu."
 				";
