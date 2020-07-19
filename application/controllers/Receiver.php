@@ -62,12 +62,12 @@ class Receiver extends CI_Controller {
 		$this->email->to($to_email);
 		$this->email->subject($subject);
 			if($subject == "Danger"){
-				$pesan = "[ ".$waktu." ]"." Pasien bernama Joni membutuhkan perawatan !! </br>
+				$pesan = "[ ".$waktu." ]"." <b>Pasien bernama Joni membutuhkan perawatan !!</b>
 				Detak jantung pasien = 65 Bpm
 				";
 			}elseif($subject == "Need Attention"){
-				$pesan = "[ ".$waktu." ]"." Kondisi pasien bernama Joni perlu diperhatikan !! </br>
-				Detak jantung pasien = 66 Bpm
+				$pesan = "[ ".$waktu." ]"." <html><body><b>Kondisi pasien bernama Joni perlu diperhatikan !!</b>
+				Detak jantung pasien = 66 Bpm</body></html>
 				";
 			}
 		$this->email->message($pesan);
