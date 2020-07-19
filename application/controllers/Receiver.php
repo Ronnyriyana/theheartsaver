@@ -24,9 +24,11 @@ class Receiver extends CI_Controller {
 			$res = $this->m->insertLog($data);
 			if($res>=1){
 				if($data['denyut_nadi']<50){
-					$this->kirim_email("Danger",$data['id_pasien'],$data['waktu']);
+					$this->kirim_email("Danger",$data['id_pasien'],$data['waktu'],$data['denyut_nadi'],$data['posisi']);
 				}elseif(($data['denyut_nadi']>100)){
-					$this->kirim_email("Need Attention",$data['id_pasien'],$data['waktu']);
+					$this->kirim_email("Need Attention",$data['id_pasien'],$data['waktu'],$data['denyut_nadi'],$data['posisi']);
+				}else{
+					echo "Data masuk";
 				}
 			}
 			else{
@@ -37,9 +39,10 @@ class Receiver extends CI_Controller {
 		}
 	  }
 	  
-	  public function kirim_email($subject,$id_pasien,$waktu) { 
+	  public function kirim_email($subject,$id_pasien,$waktu,$denyut_nadi,$posisi) { 
 		$pasien = $this->m->check_pasien($id_pasien);
 		foreach($pasien as $data){
+			$nama = $data['nama_pasien'];
 			$to_email = $data['email'];
 		}
 
@@ -62,12 +65,26 @@ class Receiver extends CI_Controller {
 		$this->email->to($to_email);
 		$this->email->subject($subject);
 			if($subject == "Danger"){
-				$pesan = "[ ".$waktu." ]"." <b>Pasien bernama Joni membutuhkan perawatan !!</b>
-				Detak jantung pasien = 65 Bpm
+				$pesan = "
+				<html>
+					<body>
+						Nama : ".$nama."</br>
+						BPM : ".$denyut_nadi."</br>
+						Posisi : ".$posisi."</br>
+						Waktu : ".$waktu."</br>
+					</body>
+				</html>
 				";
 			}elseif($subject == "Need Attention"){
-				$pesan = "[ ".$waktu." ]"." <html><body><b>Kondisi pasien bernama Joni perlu diperhatikan !!</b>
-				Detak jantung pasien = 66 Bpm</body></html>
+				$pesan = "
+				<html>
+					<body>
+						Nama : ".$nama."</br>
+						BPM : ".$denyut_nadi."</br>
+						Posisi : ".$posisi."</br>
+						Waktu : ".$waktu."</br>
+					</body>
+				</html>
 				";
 			}
 		$this->email->message($pesan);
