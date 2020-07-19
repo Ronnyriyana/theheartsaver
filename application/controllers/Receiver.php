@@ -54,7 +54,7 @@ class Receiver extends CI_Controller {
 			   'smtp_port' => 465,
 			   'smtp_user' => $from_email,
 			   'smtp_pass' => 'SOL.~0A}?ldU',
-			   'mailtype'  => 'text/html', 
+			   'mailtype'  => 'html', 
 			   'charset'   => 'iso-8859-1'
 	   );
 
