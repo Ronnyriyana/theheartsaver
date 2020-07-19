@@ -66,25 +66,17 @@ class Receiver extends CI_Controller {
 		$this->email->subject($subject);
 			if($subject == "Danger"){
 				$pesan = "
-				<html>
-					<body>
-						Nama : ".$nama."</br>
-						BPM : ".$denyut_nadi."</br>
-						Posisi : ".$posisi."</br>
-						Waktu : ".$waktu."</br>
-					</body>
-				</html>
+				Nama : ".$nama."
+				BPM : ".$denyut_nadi."
+				Posisi : ".$posisi."
+				Waktu : ".$waktu."
 				";
 			}elseif($subject == "Need Attention"){
 				$pesan = "
-				<html>
-					<body>
-						Nama : ".$nama."</br>
-						BPM : ".$denyut_nadi."</br>
-						Posisi : ".$posisi."</br>
-						Waktu : ".$waktu."</br>
-					</body>
-				</html>
+				Nama : ".$nama."
+				BPM : ".$denyut_nadi."
+				Posisi : ".$posisi."
+				Waktu : ".$waktu."
 				";
 			}
 		$this->email->message($pesan);
