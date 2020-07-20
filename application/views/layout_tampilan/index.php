@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
         <!-- //last-content -->
         <!-- footer -->
-        <?= $footer; ?>
+        
 		<!-- footer -->
 		
 </body>
