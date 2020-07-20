@@ -19,12 +19,12 @@
     </head>
     <body id="page">
         <ul class="cb-slideshow">
-            <li><span>Image 01</span><div><h3>re·lax·a·tion</h3></div></li>
-            <li><span>Image 02</span><div><h3>qui·e·tude</h3></div></li>
-            <li><span>Image 03</span><div><h3>bal·ance</h3></div></li>
-            <li><span>Image 04</span><div><h3>e·qua·nim·i·ty</h3></div></li>
-            <li><span>Image 05</span><div><h3>com·po·sure</h3></div></li>
-            <li><span>Image 06</span><div><h3>se·ren·i·ty</h3></div></li>
+            <li><span>Image 01</span><div><h3>"Jantung yang sehat adalah adalah sumber utama kekuatanmu"</h3></div></li>
+            <li><span>Image 02</span><div><h3>"Stres dan ketegangan adalah akar penyebab semua jenis penyakit jantung, jadi tetap bahagia dan terus tersenyum"</h3></div></li>
+            <li><span>Image 03</span><div><h3>"Tidak ada satupun penyakit yang tidak bisa disembuhkan, tetaplah berpikiran positif dan yakinlah pada keajaiban Tuhan"</h3></div></li>
+            <li><span>Image 04</span><div><h3>"Kamu tidak sendiri, kami ada disampingmu untuk menemanimu melawan semua rasa sakitmu."</h3></div></li>
+            <li><span>Image 05</span><div><h3>"Tidak ada kata telat untuk membuat dirimu menjadi lebih sehat"</h3></div></li>
+            <li><span>Image 06</span><div><h3>"Lakukanlah pola hidup yang sehat dan rawatlah jantungmu untuk membuat hidup menjadi lebih bahagia"</h3></div></li>
         </ul>
         <div class="container">
             

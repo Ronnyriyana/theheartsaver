@@ -47,7 +47,6 @@
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
     font-size: 160px;
     padding: 0 30px;
-    line-height: 120px;
     color: rgba(255,255,255,0.8);
 }
 .cb-slideshow li:nth-child(1) span { background-image: url(../images/banner1a.jpg) }
@@ -354,5 +353,5 @@
 	.cb-slideshow li div h3 { font-size: 100px }
 }
 @media screen and (max-width: 600px) { 
-	.cb-slideshow li div h3 { font-size: 50px }
+	.cb-slideshow li div h3 { font-size: 40px }
 }
