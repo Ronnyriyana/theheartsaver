@@ -7,7 +7,7 @@
 					<div class="panel">
 					  <p><b>Jenis Kelamin :</b>  <?= $data['jenis_kelamin']; ?></br>
 					  <b>Usia :</b>  <?= $data['usia']; ?> Thn.</br>
-					  <b>Keterangan :</b>  <?= $data['riwayat_penyakit']; ?></p>
+					  <b>Riwayat Penyakit :</b>  <?= $data['riwayat_penyakit']; ?></p>
 					</div>
 			</div>
 			<div class="col-lg-4 counter two editContent mt-3">
