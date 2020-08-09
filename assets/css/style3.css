@@ -43,11 +43,29 @@
     -ms-animation: titleAnimation 36s linear infinite 0s;
     animation: titleAnimation 36s linear infinite 0s;
 }
-.cb-slideshow li div h3 {
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 160px;
-    padding: 0 30px;
-    color: rgba(255,255,255,0.8);
+@media screen and (max-width: 1900px) { 
+	.cb-slideshow li div h3 {
+		font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+		font-size: 50px;
+		padding: 0 30px;
+		color: rgba(255,255,255,0.8);
+	}
+}
+@media screen and (max-width: 1140px) { 
+	.cb-slideshow li div h3 {
+		font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+		font-size: 50px;
+		padding: 0 30px;
+		color: rgba(255,255,255,0.8);
+	}
+}
+@media screen and (max-width: 600px) { 
+	.cb-slideshow li div h3 {
+		font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+		font-size: 40px;
+		padding: 0 30px;
+		color: rgba(255,255,255,0.8);
+	}
 }
 .cb-slideshow li:nth-child(1) span { background-image: url(../images/banner1a.jpg) }
 .cb-slideshow li:nth-child(2) span {
@@ -348,10 +366,4 @@
 /* Show at least something when animations not supported */
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
-}
-@media screen and (max-width: 1140px) { 
-	.cb-slideshow li div h3 { font-size: 100px }
-}
-@media screen and (max-width: 600px) { 
-	.cb-slideshow li div h3 { font-size: 40px }
 }
