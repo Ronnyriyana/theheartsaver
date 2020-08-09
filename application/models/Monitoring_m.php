@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Monitoring_m extends CI_Model {
-    public function getPasien($idPasien)
+    public function getPasien($idPasien)//untuk select database tabel pasien join tabel log_aktivitas
 	{
         $this->db->select('a.*, b.*,YEAR(CURDATE())-YEAR(a.usia) as usia');
         $this->db->from('pasien a');

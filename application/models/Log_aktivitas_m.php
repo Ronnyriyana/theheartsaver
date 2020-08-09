@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Log_aktivitas_m extends CI_Model {
-    public function getLog($idPasien)
+    public function getLog($idPasien)//untuk select database tabel log_aktivitas
 	{
         $this->db->where('id_pasien',$idPasien);
         $this->db->order_by('waktu', 'desc');
